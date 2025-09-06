@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Frontend Store</title>
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="body"></body>
+   <nav class="navegacion">
+       <div class="menu" >
+         <a class="navegacion__enlace " href="index.html">Tienda</a>
+         <a class="navegacion__enlace navegacion__enlace--activo" href="nosotros.html">Nosotros</a>
+         <a class="navegacion__enlace" href="contacto.html">Contáctanos</a>
+         <a class="navegacion__enlace" href="contacto.html">Esencias</a>
+      </div>
+  <!-- Carrito separado de los enlaces -->
+  <div class="carrito-contenedor">
+    <a href="carrito.html" class="carrito-icono">
+      <svg xmlns="http://www.w3.org/2000/svg"
+        width="24" height="24" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-shopping-cart">
+        <circle cx="8" cy="21" r="1" />
+        <circle cx="19" cy="21" r="1" />
+        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+      </svg>
+      <span id="cart-count" class="cart-badge">0</span>
+    </a>
+    <span id="modo" style="cursor:pointer; font-size:2rem;" onclick="modoOscuro()" title="Cambiar modo">🌙</span>
+  </div>
+</nav>
+   <header class="header">
+      <a href="index.html">
+           <img class="header__logo" src="Images/logo.png" alt="logotipo" height="280px">
+
+      </a>
+
+   </header>
+
+  
+
+   <main class="contenedor">
+      <h1 id="nosotrosColor"> Sobre Nosotros</h1>
+      <div class="nosotros">
+         <p id="textoNosotros" class="texto_nosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Vel laboriosam voluptate dolor architecto neque aliquam at. Rem accusantium
+            voluptatem nobis, neque quas cupiditate esse commodi libero, quam praesentium,
+            aut soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores sit ipsa velit dolorem
+            earum quis nisi, odit explicabo minus.
+            Ut delectus soluta rem quae, provident aliquid saepe recusandae sapiente
+            laborum?</p>
+         <img class="image_nosotros" src="Images/nosotros.jpg" alt="logotipo nosotros">
+         <h1 class="titulo_nosotros">Por qué comprar con nosotros</h1>
+      </div>
+      <section>
+         <div class="iconos">
+            <div class="menu__iconos">
+               <svg class="icono" xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke"
+                  stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                  <path d="M9 14c0 1.657 2.686 3 6 3s6 -1.343 6 -3s-2.686 -3 -6 -3s-6 1.343 -6 3z"></path>
+                  <path d="M9 14v4c0 1.656 2.686 3 6 3s6 -1.344 6 -3v-4"></path>
+                  <path
+                     d="M3 6c0 1.072 1.144 2.062 3 2.598s4.144 .536 6 0c1.856 -.536 3 -1.526 3 -2.598c0 -1.072 -1.144 -2.062 -3 -2.598s-4.144 -.536 -6 0c-1.856 .536 -3 1.526 -3 2.598z">
+                  </path>
+                  <path d="M3 6v10c0 .888 .772 1.45 2 2"></path>
+                  <path d="M3 11c0 .888 .772 1.45 2 2"></path>
+
+               </svg>
+
+               <h2 class="texto__informacion">El mejor precio</h2>
+               <p class="texto__iconos">Fragancias de lujo 
+                  al alcance de todos
+               </p>
+            </div>
+            <div class="menu__iconos">
+               <svg class="icono" xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke"
+               stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+              <!-- Tapa del perfume -->
+              <rect x="10" y="2" width="4" height="3"></rect>
+               <!-- Cuello del frasco -->
+              <rect x="9" y="5" width="6" height="2"></rect>
+              <!-- Cuerpo del frasco -->
+              <path d="M7 7h10l2 5v6a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4v-6z"></path>
+               <!-- Detalle central -->
+             <circle cx="12" cy="14" r="2"></circle>
+             </svg>
+
+               <h2 class="texto__informacion">Fragancias Exclusivas</h2>
+               <p class="texto__iconos">Aromas únicos<br/>
+                  y especiales
+               </p>
+            </div>
+            <div class="menu__iconos">
+                <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                width="48" height="48">
+              <path d="M3 7l9-4l9 4v6c0 5-4 9-9 9s-9-4-9-9V7z"></path>
+              <text x="12" y="16" text-anchor="middle" font-size="8"
+               font-family="Arial" font-weight="bold">%</text>
+              </svg>
+
+               <h2 class="texto__informacion">Ofertas</h2>
+               <p class="texto__iconos">Aprovecha
+                  nuestros descuentos y promociones
+               </p>
+            </div>
+            <div class="menu__iconos">
+                <div class="calidad">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                 width="32" height="32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                 <circle cx="12" cy="8" r="6"></circle>
+                 <path d="M9 14l-3 7l6-3l6 3l-3-7"></path>
+                  </svg>
+                
+                </div>
+
+               <h2 class="texto__informacion">La mejor calidad</h2>
+               <p class="texto__iconos">Perfumes con 
+                  excelente durabilidad
+               </p>
+            </div>
+         </div>
+      </section>
+
+
+   </main>
+
+   <footer class="footer">
+      <p class="footer__texto">Essentris Perfum- todos los derechos reservados</p>
+
+   </footer>
+   <script src="carrito.js"></script>
+
+</body>
+
+</html>

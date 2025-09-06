@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Store</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body id="body">
+    <nav class="navegacion">
+      <div class="menu">
+        <a
+          class="navegacion__enlace navegacion__enlace--activo"
+          href="index.html"
+          >Tienda</a
+        >
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+        <a class="navegacion__enlace" href="contacto.html">Contáctanos</a>
+        <a class="navegacion__enlace" href="contacto.html">Esencias</a>
+      </div>
+      <!-- Carrito separado de los enlaces -->
+      <div class="carrito-contenedor">
+        <a href="carrito.html" class="carrito-icono">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-shopping-cart"
+          >
+            <circle cx="8" cy="21" r="1" />
+            <circle cx="19" cy="21" r="1" />
+            <path
+              d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+            />
+          </svg>
+          <span id="cart-count" class="cart-badge">0</span>
+        </a>
+        <span
+          id="modo"
+          style="cursor: pointer; font-size: 2rem"
+          onclick="modoOscuro()"
+          title="Cambiar modo"
+          >🌙</span
+        >
+      </div>
+    </nav>
+
+    <header class="header">
+      <a href="index.html">
+        <img
+          class="header__logo"
+          src="Images/logo.png"
+          alt="logotipo"
+          height="280px"
+        />
+      </a>
+    </header>
+
+    <main class="contenedor">
+      <h1 id="productoSeleccionado"></h1>
+
+      <div class="camisas">
+        <img class="camisa_imagen" src="Images/1.jpg" alt="camisa" />
+
+        <div class="camisa_-contenido">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+            maxime, quibusdam, saepe hic animi iste natus fuga ducimus nemo
+            similique quos ut! Est error minima laborum earum reprehenderit hic
+            iste.
+          </p>
+          <form class="formulario">
+            <select class="formulario_campo talla">
+              <option disabled selected>--Seleccionar presentacion--</option>
+              <option>100ml</option>
+              <option>150ml</option>
+              <option>200ml</option>
+            </select>
+            <input
+              class="formulario_campo cantidad"
+              type="number"
+              placeholder="cantidad"
+              min="1"
+              value="1"
+            />
+            <input
+              class="formulario_submit"
+              type="submit"
+              value="Agregar al carrito"
+            />
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__texto">
+        Essentris Perfum- todos los derechos reservados
+      </p>
+    </footer>
+    <script>
+      window.onload = function () {
+        let producto = localStorage.getItem("productoSeleccionado");
+        if (producto) {
+          document.getElementById("productoSeleccionado").innerText = producto;
+        }
+      };
+    </script>
+    <script src="carrito.js"></script>
+  </body>
+</html>

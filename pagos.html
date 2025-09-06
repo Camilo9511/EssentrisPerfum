@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Store</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="body"></body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="Images/logo.png" alt="logotipo" height="280px">
+
+        </a>
+
+    </header>
+
+   <nav class="navegacion">
+       <div class="menu" >
+         <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+         <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+         <a class="navegacion__enlace" href="contacto.html">Contáctanos</a>
+         <a class="navegacion__enlace" href="contacto.html">Esencias</a>
+      </div>
+  <!-- Carrito separado de los enlaces -->
+  <div class="carrito-contenedor">
+    <a href="carrito.html">
+      <svg xmlns="http://www.w3.org/2000/svg"
+        width="24" height="24" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-shopping-cart">
+        <circle cx="8" cy="21" r="1" />
+        <circle cx="19" cy="21" r="1" />
+        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+      </svg>
+    </a>
+    <span id="cart-count" class="cart-badge">0</span>
+    <span id="modo" style="cursor:pointer; font-size:2rem;" onclick="modoOscuro()" title="Cambiar modo">🌙</span>
+  </div>
+</nav>
+    
+    <main class="contenedor">
+        <section class="shopping-cart">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+
+
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Aquí se insertan los productos con JS -->
+                </tbody>
+            </table>
+            <p id="cart-empty">El carrito está vacío.</p>
+            <p id="cart-total" class="total">Total: $0.00</p>
+
+        </section>
+        <p> Detalle de facturacion</p>
+        <form class="formulario-compra">
+            <div class="datos">
+                <p>Nombre</p>
+                <input type="text" placeholder="Nombre"></p>
+            </div>
+
+            <div class="datos">
+                <p>Apellidos</p>
+                <input type="text" placeholder="Apellidos"></p>
+            </div>
+             <div class="datos">
+                <p>Cedula</p>
+                <input type="text" placeholder="Cedula"></p>
+            </div>
+            <div class="datos">
+                <p>Departamento</p>
+                <input type="text" placeholder="Departamento"></p>
+            </div>
+            <div class="datos">
+                <p>Direccion</p>
+                <input type="text" placeholder="Cedula"></p>
+            </div>
+            <div class="datos">
+                <p>Telefono</p>
+                <input type="text" placeholder="telefono"></p>
+            </div>
+            <div class="datos">
+                <p>Email</p>
+                <input type="text" placeholder="Email"></p>
+            </div>
+            
+           
+            
+            
+            <select id="medio-pago">
+                <option disabled selected>--Seleccionar medio de pago--</option>
+                <option>Efecty</option>
+                <option>Tarjeta de crédito</option>
+                <option>Addi</option>
+                <option>PSE</option>
+            </select>
+             <div class="boton-pedidos">
+               <button class="boton-pedido">Realizar pedido</button>
+        </div>
+        </form>
+       
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">Essentris Perfum- todos los derechos reservados</p>
+
+    </footer>
+    <script src="carrito.js"></script>
+
+</body>
+
+</html>
