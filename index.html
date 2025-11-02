@@ -23,7 +23,7 @@
        <div class="menu" >
          <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
          <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
-         <a class="navegacion__enlace" href="contacto.html">Contáctanos</a>
+         <a class="navegacion__enlace" href="contactanos.html">Contáctanos</a>
          <a class="navegacion__enlace" href="contacto.html">Esencias</a>
       </div>
   <!-- Carrito separado de los enlaces -->
@@ -67,7 +67,7 @@
       <h1 id="producto">Productos Destacados</h1>
       <div class="grid">
         <div class="producto">
-          <a onclick="seleccionProducto()" href="productos.html">
+          <a onclick="seleccionProducto('Valentino born in roma','Images/1.jpg')" >
             <img
               class="producto__imagen"
               src="Images/1.jpg"
@@ -80,7 +80,7 @@
           </div>
         </div>
         <div class="producto">
-          <a href="productos2.html">
+          <a onclick="seleccionProducto('Aqua de gio parfum', 'Images/2.jpg')" >
             <img
               class="producto__imagen"
               src="Images/2.jpg"
@@ -88,151 +88,163 @@
             />
           </a>
           <div class="producto__informacion">
-            <p class="producto__nombre">Acqua de gio parfum</p>
+            <p  id="productoNombre" class="producto__nombre">Acqua de gio parfum</p>
             <p class="producto__precio">$25</p>
           </div>
         </div>
         <div class="producto">
-          <a href="productos.html"></a>
+          <a onclick="seleccionProducto('Aqua de gio profondo', 'Images/3.jpg')" >
           <img
             class="producto__imagen"
             src="Images/3.jpg"
             alt="imagen camisa"
-          />
+            />
+          </a>
           <div class="producto__informacion">
-            <p class="producto__nombre">Acqua de gio profondo</p>
+            <p  id="productoNombre" class="producto__nombre">Acqua de gio profondo</p>
             <p class="producto__precio">$25</p>
           </div>
         </div>
         <div class="producto">
-          <a href="productos.html"></a>
+          <a onclick="seleccionProducto('One Million', 'Images/4.jpg')" >
           <img
             class="producto__imagen"
             src="Images/4.jpg"
             alt="imagen camisa"
           />
+          </a>
           <div class="producto__informacion">
-            <p class="producto__nombre">One million</p>
+            <p  id="productoNombre" class="producto__nombre">One Million</p>
             <p class="producto__precio">$25</p>
           </div>
         </div>
         <div class="producto">
-          <a href="productos.html"></a>
+          <a onclick="seleccionProducto('Le Beau', 'Images/5.jpg')" >
           <img
             class="producto__imagen"
             src="Images/5.jpg"
             alt="imagen camisa"
           />
+          </a>
           <div class="producto__informacion">
-            <p class="producto__nombre">Le beau</p>
+            <p  id="productoNombre" class="producto__nombre">Le beau</p>
             <p class="producto__precio">$25</p>
           </div>
         </div>
         <div class="producto">
-          <a href="productos.html"></a>
+          <a onclick="seleccionProducto('Le male elixir', 'Images/6.jpg')">
           <img
             class="producto__imagen"
             src="Images/6.jpg"
             alt="imagen camisa"
           />
+          </a>
           <div class="producto__informacion">
-            <p class="producto__nombre">Le male elixir</p>
+            <p id="productoNombre" class="producto__nombre">Le male elixir</p>
             <p class="producto__precio">$25</p>
           </div>
         </div>
         <div class="producto">
-          <a href="productos.html"></a>
+          <a onclick="seleccionProducto('Allure Home Sport', 'Images/7.jpg')" >
           <img
             class="producto__imagen"
             src="Images/7.jpg"
             alt="imagen camisa"
           />
+          </a>
           <div class="producto__informacion">
-            <p class="producto__nombre">Allure home sport</p>
+            <p id="productoNombre" class="producto__nombre">Allure home sport</p>
             <p class="producto__precio">$25</p>
           </div>
         </div>
         <div class="producto">
-          <a href="productos.html"></a>
+          <a onclick="seleccionProducto('Toy Boy', 'Images/8.jpg')">
           <img
             class="producto__imagen"
             src="Images/8.jpg"
             alt="imagen camisa"
           />
+          </a>
           <div class="producto__informacion">
-            <p class="producto__nombre">Moschino toy boy</p>
+            <p id="productoNombre" class="producto__nombre">Moschino toy boy</p>
             <p class="producto__precio">$25</p>
           </div>
         </div>
         <div class="producto">
-          <a href="productos.html"></a>
+          <a onclick="seleccionProducto('Creed Adventus', 'Images/9.jpg')" >
           <img
             class="producto__imagen"
             src="Images/9.jpg"
             alt="imagen camisa"
           />
+          </a>
           <div class="producto__informacion">
-            <p class="producto__nombre">Creed Adventus</p>
+            <p id="productoNombre" class="producto__nombre">Creed Adventus</p>
             <p class="producto__precio">$25</p>
           </div>
         </div>
         <div class="producto">
-          <a href="productos.html"></a>
+          <a onclick="seleccionProducto('Dior Sauvage', 'Images/10.jpg')" >
           <img
             class="producto__imagen"
             src="Images/10.jpg"
             alt="imagen camisa"
           />
+          </a>
           <div class="producto__informacion">
-            <p class="producto__nombre">Dior sauvage</p>
+            <p id="productoNombre" class="producto__nombre">Dior sauvage</p>
             <p class="producto__precio">$25</p>
           </div>
         </div>
         <div class="producto">
-          <a href="productos.html"></a>
+          <a onclick="seleccionProducto('Club De Nuit', 'Images/11.jpg')" >
           <img
             class="producto__imagen"
             src="Images/11.jpg"
             alt="imagen camisa"
           />
+          </a>
           <div class="producto__informacion">
-            <p class="producto__nombre">Club de nuit</p>
+            <p id="productoNombre" class="producto__nombre">Club de nuit</p>
             <p class="producto__precio">$25</p>
           </div>
         </div>
         <div class="producto">
-          <a href="productos.html"></a>
+          <a onclick="seleccionProducto('Santal 33', 'Images/12.jpg')">
           <img
             class="producto__imagen"
             src="Images/12.jpg"
             alt="imagen camisa"
           />
+          </a>
           <div class="producto__informacion">
-            <p class="producto__nombre">Santal 33</p>
+            <p id="productoNombre" class="producto__nombre">Santal 33</p>
             <p class="producto__precio">$25</p>
           </div>
         </div>
         <div class="producto">
-          <a href="productos.html"></a>
+          <a onclick="seleccionProducto('Korbaj Toxic Desire', 'Images/13.jpg')">
           <img
             class="producto__imagen"
             src="Images/13.jpg"
             alt="imagen camisa"
           />
+          </a>
           <div class="producto__informacion">
-            <p class="producto__nombre">Korbaj toxic desire</p>
+            <p id="productoNombre" class="producto__nombre">Korbaj toxic desire</p>
             <p class="producto__precio">$25</p>
           </div>
         </div>
         <div class="producto">
-          <a href="productos.html"></a>
+          <a onclick="seleccionProducto('Bleu De Chanel', 'Images/14.jpg')">
           <img
             class="producto__imagen"
             src="Images/14.jpg"
             alt="imagen camisa"
           />
+          </a>
           <div class="producto__informacion">
-            <p class="producto__nombre">Bleu de chanel</p>
+            <p id="productoNombre" class="producto__nombre">Bleu de chanel</p>
             <p class="producto__precio">$25</p>
           </div>
         </div>

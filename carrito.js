@@ -216,15 +216,25 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 
 } */
-function seleccionProducto() {
-  let productoSeleccionado = document.getElementById("productoNombre").textContent;
+function seleccionProducto(nombre,imagen) {
   
+  const productoSeleccionado = { nombre, imagen };
   // Guardar en localStorage
-  localStorage.setItem("productoSeleccionado", productoSeleccionado);
+  localStorage.setItem("productoSeleccionado", JSON.stringify(productoSeleccionado));
 
   // Redirigir a la otra página
   window.location.href = "productos.html";
 }
+
+//agregar producto a productos
+
+const producto = JSON.parse(localStorage.getItem("productoSeleccionado"));
+
+  // Si existe, mostrarlo en la página
+  if (producto) {
+    document.getElementById("productoSeleccionado").textContent = producto.nombre;
+    document.getElementById("camisaImagen").src = producto.imagen;
+  }
 
 //link wapp
 
@@ -261,6 +271,43 @@ function enviarWhatsApp() {
 
   window.open(url, "_blank");
 }
+
+function envio(event) {
+  event.preventDefault(); 
+
+  const inputs = document.querySelectorAll(".inputs");
+  let todosLlenos = true;
+
+  
+  inputs.forEach(input => {
+    if (input.value.trim() === "") {
+      todosLlenos = false;
+    }
+  });
+
+  if (todosLlenos) {
+    document.getElementById("envio_mensaje").innerHTML = "<ion-icon name='happy'></ion-icon> Mensaje enviado";
+    document.getElementById("envio_mensaje").style.color = "rgba(22,220,11,0.8)";
+
+  
+    inputs.forEach(input => input.value = "");
+
+    setTimeout(() => {
+      document.getElementById("envio_mensaje").innerHTML = "";
+    }, 3000);
+  } else {
+    document.getElementById("envio_mensaje").innerHTML = " <ion-icon name='sad'></ion-icon> Completa todos los campos";
+    document.getElementById("envio_mensaje").style.color = "red";
+    
+  }
+}
+
+
+
+
+ 
+
+
   
 
   

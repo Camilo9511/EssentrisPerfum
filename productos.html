@@ -40,7 +40,7 @@
           >Tienda</a
         >
         <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
-        <a class="navegacion__enlace" href="contacto.html">Contáctanos</a>
+        <a class="navegacion__enlace" href="contactanos.html">Contáctanos</a>
         <a class="navegacion__enlace" href="contacto.html">Esencias</a>
       </div>
       <!-- Carrito separado de los enlaces -->
@@ -91,7 +91,7 @@
       <h1 id="productoSeleccionado"></h1>
 
       <div class="camisas">
-        <img class="camisa_imagen" src="Images/1.jpg" alt="camisa" />
+        <img id="camisaImagen" class="camisa_imagen" src="" alt="camisa" />
 
         <div class="camisa_-contenido">
           <p>
@@ -101,13 +101,14 @@
             iste.
           </p>
           <form class="formulario">
-            <select class="formulario_campo talla">
+            <select id="seleccionTamaño" class="formulario_campo talla">
               <option disabled selected>--Seleccionar presentacion--</option>
               <option>100ml</option>
               <option>150ml</option>
               <option>200ml</option>
             </select>
             <input
+              id="seleccionCantidad"
               class="formulario_campo cantidad"
               type="number"
               placeholder="cantidad"
@@ -123,20 +124,43 @@
         </div>
       </div>
     </main>
+    <script>
+      document
+        .getElementById("seleccionTamaño")
+        .addEventListener("focus", (e) => {
+          e.target.style.background = "rgba(254, 237, 78, 0.2)";
+        });
+        document
+        .getElementById("seleccionTamaño")
+        .addEventListener("blur", (e) => {
+          e.target.style.background = "rgba(255, 255, 255, 0.2)";
+        })
+        document
+        .getElementById("seleccionCantidad")
+        .addEventListener("focus", (e) => {
+          e.target.style.background = "rgba(254, 237, 78, 0.2)";
+        });
+        document
+        .getElementById("seleccionCantidad")
+        .addEventListener("blur", (e) => {
+          e.target.style.background = "rgba(255, 255, 255, 0.2)";
+        })
+
+    </script>
 
     <footer class="footer">
       <p class="footer__texto">
         Essentris Perfum- todos los derechos reservados
       </p>
     </footer>
-    <script>
+    <!-- <script>
       window.onload = function () {
         let producto = localStorage.getItem("productoSeleccionado");
         if (producto) {
           document.getElementById("productoSeleccionado").innerText = producto;
         }
       };
-    </script>
+    </script> -->
     <script src="carrito.js"></script>
   </body>
 </html>

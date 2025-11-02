@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Store</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body onload="entrar()" id="body">
+    <nav class="navegacion">
+      <div class="menu">
+        <a
+          class="navegacion__enlace"
+          href="index.html"
+          >Tienda</a
+        >
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="contactanos.html">Contáctanos</a>
+        <a class="navegacion__enlace" href="contacto.html">Esencias</a>
+      </div>
+    </nav>
+    <main>
+      <form id="formulario" class="formulario_contactanos">
+        <h2>contactanos</h2>
+        <div class="formContacto">
+        <ul class="ul">
+         <div class="li">
+          <li class="campos">
+            <label for="nombre">Nombre:</label>
+            <input class="inputs" type="text" id="nombre" value="" name="nombre" required />
+          </li>
+
+          <li class="campos">
+            <label for="email">Correo electrónico:</label>
+            <input class="inputs" type="email" id="email" value="" name="email" required />
+          </li>
+
+          <li class="campos">
+            <label for="mensaje">Mensaje:</label>
+            <textarea class="inputs" id="mensaje" name="mensaje" rows="4" ></textarea>
+          </li>
+
+          <li class="campos">
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria">
+              <option value="consulta">Consulta</option>
+              <option value="reclamo">Reclamo</option>
+              <option value="sugerencia">Sugerencia</option>
+              <option value="otro">Otro</option>
+            </select>
+          </li>
+
+          <li class="campos">
+            <button onclick="envio(event)" class="boton_contactanos" type="submit">Enviar</button>
+          </li>
+          </div>
+        </ul>
+        </div>
+      </form>
+      <div id="envio_mensaje">
+        <icon> </icon>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer__texto">
+        Essentris Perfum- todos los derechos reservados
+      </p>
+    </footer>
+     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="carrito.js"></script>
+  </body>
+</html>
